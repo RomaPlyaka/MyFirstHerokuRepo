@@ -32,7 +32,11 @@
     </div>
   </div>
   <script>
-    fetch('/Users')
+    fetch('/Users').then (
+      data =>{
+        console.log(data)
+      }
+    )
   </script>
   Node test
   
