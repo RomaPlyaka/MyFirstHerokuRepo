@@ -44,16 +44,21 @@
       }
     )
 
-    const wrapperDiv = document.body.createElement('div')
-    const myform = document.body.createElement('form')
+    let wrapperDiv = document.createElement('div')
+    let myform = document.createElement('form')
     wrapperDiv.prepend(myform)
-    const inp = document.body.createElement('input')
+    let inp = document.createElement('input')
     myform.prepend(inp)
     inp.setAttribute('type', 'text')
-    const textFieldFromInp = document.body.createElement('p')
+    let textFieldFromInp = document.createElement('p')
     wrapperDiv.prepend(textFieldFromInp)
     inp.oninput = function () {
       textFieldFromInp.innerHTML = inp.value();
+    }
+    let myButton = document.createElement('button')
+    myform.prepend(myButton)
+    myButton.onclick = ()=>{
+      wrapperDiv.prepend(inp)
     }
   </script>
   Node test
