@@ -31,12 +31,20 @@
       </div>
     </div>
   </div>
+
+
   <script>
     fetch('/Users').then (
       data =>{
         console.log(data)
       }
     )
+    const wrapperDiv = document.createElement('div')
+    const myform = document.createElement('form')
+    wrapperDiv.prepend(myform)
+    const inp = document.createElement('input')
+    myform.prepend(inp)
+    inp.setAttribute('type' ,'text')
   </script>
   Node test
   
