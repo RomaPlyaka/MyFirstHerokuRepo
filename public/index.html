@@ -44,16 +44,16 @@
       }
     )
 
-    const wrapperDiv = document.createElement('div')
-    const myform = document.createElement('form')
+    const wrapperDiv = document.body.createElement('div')
+    const myform = document.body.createElement('form')
     wrapperDiv.prepend(myform)
-    const inp = document.createElement('input')
+    const inp = document.body.createElement('input')
     myform.prepend(inp)
     inp.setAttribute('type', 'text')
-    const textFieldFromInp = document.createElement('p')
+    const textFieldFromInp = document.body.createElement('p')
     wrapperDiv.prepend(textFieldFromInp)
     inp.oninput = function () {
-      textFieldFromInp.innerHTML = inp.value;
+      textFieldFromInp.innerHTML = inp.value();
     }
   </script>
   Node test
