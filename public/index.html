@@ -38,14 +38,16 @@
 
 
   <script>
-    fetch('/Users').then(
-      data => {
-        console.log(data)
-      }
-    )
+    // fetch('/Users')
+    // .then(
+    //   data => {
+    //     console.log(data)
+    //   }
+    // )
 
     let wrapperDiv = document.createElement('div')
     let myform = document.createElement('form')
+    document.body.prepend(wrapperDiv)
     wrapperDiv.prepend(myform)
     let inp = document.createElement('input')
     myform.prepend(inp)
@@ -53,12 +55,14 @@
     let textFieldFromInp = document.createElement('p')
     wrapperDiv.prepend(textFieldFromInp)
     inp.oninput = function () {
-      textFieldFromInp.innerHTML = inp.value();
+      textFieldFromInp.innerHTML = inp.value;
     }
     let myButton = document.createElement('button')
+    myButton.setAttribute('name',"Clickme to comment")
     myform.prepend(myButton)
-    myButton.onclick = ()=>{
-      wrapperDiv.prepend(inp)
+    myButton.onclick = (e)=>{
+      e.preventDefault()
+      wrapperDiv.prepend(document.createElement('div').innerHTML = inp.value )
     }
   </script>
   Node test
