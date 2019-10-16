@@ -45,6 +45,11 @@
     const inp = document.createElement('input')
     myform.prepend(inp)
     inp.setAttribute('type' ,'text')
+    const textFieldFromInp = document.createElement('p')
+    wrapperDiv.prepend(textFieldFromInp)
+    inp.oninput = function() {
+      textFieldFromInp.innerHTML = inp.value;
+  };
   </script>
   Node test
   
