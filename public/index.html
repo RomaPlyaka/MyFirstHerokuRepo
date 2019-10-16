@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Node test</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
 <body>
 
   <div class="container">
@@ -15,7 +18,8 @@
         <form>
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter email">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
           <div class="form-group">
@@ -34,24 +38,25 @@
 
 
   <script>
-    fetch('/Users').then (
-      data =>{
+    fetch('/Users').then(
+      data => {
         console.log(data)
       }
     )
+
     const wrapperDiv = document.createElement('div')
     const myform = document.createElement('form')
     wrapperDiv.prepend(myform)
     const inp = document.createElement('input')
     myform.prepend(inp)
-    inp.setAttribute('type' ,'text')
+    inp.setAttribute('type', 'text')
     const textFieldFromInp = document.createElement('p')
     wrapperDiv.prepend(textFieldFromInp)
-    inp.oninput = function() {
+    inp.oninput = function () {
       textFieldFromInp.innerHTML = inp.value;
-  };
+    }
   </script>
   Node test
-  
 </body>
+
 </html>
